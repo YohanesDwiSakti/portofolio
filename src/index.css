@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-bg: #09090b;
+  --color-surface: #18181b;
+  --color-border: #27272a;
+  --color-primary: #3b82f6;
+  --color-text-muted: #a1a1aa;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-white font-sans antialiased selection:bg-primary/30;
+  }
+}
+
+@layer utilities {
+  .minimal-card {
+    @apply bg-surface border border-border rounded-lg transition-all duration-200 hover:border-primary/50;
+  }
+  
+  .code-text {
+    @apply font-mono text-sm text-primary;
+  }
+}
